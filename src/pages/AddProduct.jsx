@@ -17,6 +17,7 @@ import TimePreparation from "../components/TimePreparation";
 import Rating from "../components/Rating";
 import AdictionalItem from "../components/AdictionalItem";
 import { handleAddProduct } from "../store/root/actions";
+import { StatusBar } from "expo-status-bar";
 
 const windowHeight = Dimensions.get("window").height;
 const navbarHeight = windowHeight - (windowHeight + Constants.statusBarHeight);
@@ -94,6 +95,7 @@ export default function AddProduct({ route, navigation }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="dark" />
       <ScrollView
         style={styles.content}
         contentContainerStyle={{ gap: 20, padding: 20, paddingBottom: 90 }}
