@@ -33,6 +33,7 @@ export default function Cart({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <StatusBar style="dark" />
       <ScrollView
         style={styles.content}
         contentContainerStyle={{ gap: 20, padding: 20, paddingBottom: 90 }}

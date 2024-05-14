@@ -1,16 +1,17 @@
 {
   "cli": {
-    "version": ">= 6.0.0"
+    "version": "^9.0.5",
+    "requireCommit": true
   },
   "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
     "preview": {
-      "channel": "main",
-      "android": {
-        "buildType": "apk"
-      }
+      "distribution": "internal"
     },
     "production": {
-      "channel": "main",
       "android": {
         "buildType": "apk"
       }

@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "menu-digital",
-    "slug": "menu-digital",
+    "slug": "menu-digital-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
@@ -11,23 +11,34 @@
       "resizeMode": "contain",
       "backgroundColor": "#fff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#fff"
-      }
+      },
+      "package": "com.icaro.menudigital",
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "eac39a19-efbc-48b7-95cd-7900b58a4953"
+        "projectId": "fe3cac24-79e4-49ba-bd39-a47952238801"
       }
+    },
+    "owner": "ryanmath",
+    "updates": {
+      "url": "https://u.expo.dev/fe3cac24-79e4-49ba-bd39-a47952238801"
     }
   }
 }
