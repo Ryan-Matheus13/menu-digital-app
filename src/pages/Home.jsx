@@ -13,6 +13,7 @@ import SearchInput from "../components/SearchInput";
 import Categorys from "../components/Categorys";
 import { useAppSelector } from "../store/hooks/useAppSelector";
 import { useAppDispatch } from "../store/hooks/useAppDispatch";
+import { StatusBar } from "expo-status-bar";
 
 import { handleSetCategorys, handleSetProducts } from "../store/root/actions";
 import Header from "../components/Header";

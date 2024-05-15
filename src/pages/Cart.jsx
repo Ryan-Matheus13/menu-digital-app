@@ -14,6 +14,7 @@ import { handleSetCategorys, handleSetProducts } from "../store/root/actions";
 import { useAppSelector } from "../store/hooks/useAppSelector";
 import { useAppDispatch } from "../store/hooks/useAppDispatch";
 import ProductCartItem from "../components/ProductCartItem";
+import { StatusBar } from "expo-status-bar";
 
 const windowHeight = Dimensions.get("window").height;
 const navbarHeight = windowHeight - (windowHeight + Constants.statusBarHeight);

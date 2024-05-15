@@ -14,6 +14,7 @@ import { useAppSelector } from "../store/hooks/useAppSelector";
 import { useAppDispatch } from "../store/hooks/useAppDispatch";
 import Quantity from "../components/Quantity";
 import TimePreparation from "../components/TimePreparation";
+import { StatusBar } from "expo-status-bar";
 import Rating from "../components/Rating";
 import AdictionalItem from "../components/AdictionalItem";
 import { handleAddProduct } from "../store/root/actions";
