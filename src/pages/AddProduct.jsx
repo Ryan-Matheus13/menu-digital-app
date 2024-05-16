@@ -18,7 +18,6 @@ import { StatusBar } from "expo-status-bar";
 import Rating from "../components/Rating";
 import AdictionalItem from "../components/AdictionalItem";
 import { handleAddProduct } from "../store/root/actions";
-import { StatusBar } from "expo-status-bar";
 
 const windowHeight = Dimensions.get("window").height;
 const navbarHeight = windowHeight - (windowHeight + Constants.statusBarHeight);
