@@ -417,6 +417,13 @@ export default function Home({ navigation }) {
     );
   };
 
+  const handleFilterList = () => {
+    const filteredRows = rootStore.products.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+    return filteredRows;
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar style="dark" />
@@ -438,14 +445,22 @@ export default function Home({ navigation }) {
           placeholder={"Buscar refeição"}
           onChange={(value) => setSearch(value)}
         />
-        <Categorys categorys={rootStore.categorys} />
-        <View style={styles.descriptionContainer}>
-          <Text style={styles.descriptionTitle}>Peça já</Text>
-          <Text style={styles.description}>
-            20% de desconto no primeiro pedido
-          </Text>
-        </View>
-        <Products navigation={navigation} products={rootStore.products} />
+        {!search && (
+          <>
+            <Categorys categorys={rootStore.categorys} />
+            <View style={styles.descriptionContainer}>
+              <Text style={styles.descriptionTitle}>Peça já</Text>
+              <Text style={styles.description}>
+                20% de desconto no primeiro pedido
+              </Text>
+            </View>
+          </>
+        )}
+        <Products
+          filter={handleFilterList}
+          navigation={navigation}
+          products={rootStore.products}
+        />
       </ScrollView>
     </View>
   );
